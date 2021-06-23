@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="pt_BR">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+	<!-- DataTable CSS -->
+	<link rel="stylesheet" type="text/css" href="css/datatables.min.css" />
+
+	<!-- Bootstrap Table of Contents CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-toc.min.css" />
+
+	<!-- iCheck CSS -->
+	<link rel="stylesheet" type="text/css" href="css/purple.css" />
+
+	<!-- d3-mitch-tree CSS -->
+	<link rel="stylesheet" type="text/css" href="css/d3-mitch-tree.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/d3-mitch-tree-theme-default.min.css" />
+
+	<!-- leaflet CSS -->
+	<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+	<link rel='stylesheet' type="text/css" href='css/leaflet.fullscreen.css' />
+	<link rel='stylesheet' type="text/css" href='css/leaflet-search.css' />
+
+	<title>FAQs - Bancada</title>
+
+	<!-- Jquery -->
+	<script type="text/javascript" src="js/jquery-3.5.1.slim.min.js"></script>
+	<!--<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>-->
+
+	<!-- Bootstrap js -->
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+	<!-- DataTable js -->
+	<script type="text/javascript" src="js/datatables.min.js"></script>
+	<script type="text/javascript" src="js/accent-neutralise.js"></script>
+
+	<!-- pagination js -->
+	<script type="text/javascript" src="js/pagination.min.js"></script>
+
+	<!-- Table of Contents js -->
+	<script type="text/javascript" src="js/bootstrap-toc.min.js"></script>
+
+	<!-- Anchor js -->
+	<script type="text/javascript" src="js/anchor.min.js"></script>
+
+	<!-- iCheck js -->
+	<script type="text/javascript" src="js/icheck.min.js"></script>
+
+	<!-- d3-mitch-tree js -->
+	<script type="text/javascript" src="js/d3-mitch-tree.min.js"></script>
+
+	<!-- tree js -->
+	<script type="text/javascript" src="js/tree.min.js"></script>
+
+	<!-- leaflet js -->
+	<script type="text/javascript" src="js/leaflet.js"></script>
+	<script type="text/javascript" src='js/Leaflet.fullscreen.min.js'></script>
+	<script type="text/javascript" src="js/leaflet-search.js"></script>
+
+	<!-- Dados -->
+	<script type="text/javascript" src="data/data.js"></script>
+
+	<!-- Funções de inicialização -->
+	<script type="text/javascript" src="js/initialize.js"></script>
+
+	<style>
+		/* For DataTable Toggle */
+		/*@import url('//cdn.datatables.net/1.10.2/css/jquery.dataTables.css');*/
+
+		td.details-control {
+			background: url('img/details_open.png') no-repeat center center;
+			cursor: pointer;
+		}
+
+		tr.shown td.details-control {
+			background: url('img/details_close.png') no-repeat center center;
+		}
+
+		/*#map {
+			width: 600px;
+			height: 400px;
+		}*/
+	</style>
+
+	<link rel="shortcut icon" href="img/favicon.ico">
+
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+
+	<!-- header -->
+	<div class="container-fluid">
+
+		<header class="blog-header py-3">
+
+			<div class="row">
+
+				<div class="col-sm-9">
+					<h1>FAQs - Bancada</h1>
+				</div>
+
+				<div class="col-sm-3">
+					<input class="form-control" id="filtro-nome" placeholder="Pesquise todo o site e pressione <ENTER>">
+				</div>
+
+			</div>
+
+
+
+			<ul class="nav nav-tabs" id="myTab">
+				<li class="nav-item" role="presentation">
+					<a class="nav-link active" id="formatacao-tab" data-toggle="tab" href="#formatacao" role="tab"
+						aria-controls="formatacao" aria-selected="true">Formatação</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="instalacao-tab" data-toggle="tab" href="#instalacao" role="tab"
+						aria-controls="instalacao" aria-selected="false">Instalação</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="administrativo-tab" data-toggle="tab" href="#administrativo" role="tab"
+						aria-controls="administrativo" aria-selected="false">Administrativo</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="plantao-tab" data-toggle="tab" href="#plantao" role="tab"
+						aria-controls="plantao" aria-selected="false">Plantão</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="utilitarios-tab" data-toggle="tab" href="#utilitarios" role="tab"
+						aria-controls="utilitarios" aria-selected="false">Utilitários</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="predios-tab" data-toggle="tab" href="#predios" role="tab"
+						aria-controls="predios" aria-selected="false">Prédios</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="organograma-tab" data-toggle="tab" href="#organograma" role="tab"
+						aria-controls="organograma" aria-selected="false">Organograma</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="localidades-tab" data-toggle="tab" href="#localidades" role="tab"
+						aria-controls="localidades" aria-selected="false">Localidades</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="impressoras-tab" data-toggle="tab" href="#impressoras" role="tab"
+						aria-controls="impressoras" aria-selected="false">Impressoras</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="contato-tab" data-toggle="tab" href="#contato" role="tab"
+						aria-controls="contato" aria-selected="false">Contato</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="busca-tab" data-toggle="tab" href="#busca" role="tab" aria-controls="busca"
+						aria-selected="false">Busca</a>
+				</li>
+			</ul>
+
+		</header>
+
+	</div> <!-- ./header -->
+
+	<!-- main -->
+	<main role="main" class="container-fluid">
+
+		<div class="row">
+
+			<div class="col-sm-10" id="dinamic-content">
+
+				<!-- Conteudo -->
+				<div class="tab-content" id="myTabContent">
+
+					<!-- Formatacao -->
+					<div class="tab-pane fade show active" id="formatacao" role="tabpanel"
+						aria-labelledby="formatacao-tab">
+
+						<div class="accordion" id="accordionFormatacao"></div>
+						<div id="pagination-container"></div>
+
+						<!-- Pesquisar por scroll sidebar sidebar scroll bootstrap ou scrollspy -->
+						<!-- Ver esse também: https://pagination.js.org/index.html -->
+
+
+					</div> <!-- ./Formatacao -->
+
+					<!-- Instalação -->
+					<div class="tab-pane fade" id="instalacao" role="tabpanel" aria-labelledby="instalacao-tab">
+
+						<div class="accordion" id="accordionInstalacao"></div>
+
+					</div> <!-- ./Instalação -->
+
+					<!-- Administrativo -->
+					<div class="tab-pane fade" id="administrativo" role="tabpanel" aria-labelledby="administrativo-tab">
+
+						<div class="accordion" id="accordionAdministrativo"></div>
+
+					</div> <!-- ./Administrativo -->
+
+					<!-- Plantão -->
+					<div class="tab-pane fade" id="plantao" role="tabpanel" aria-labelledby="plantao-tab">
+
+						<div class="accordion" id="accordionPlantao"></div>
+
+					</div> <!-- ./Plantão -->
+
+					<!-- Utilitários -->
+					<div class="tab-pane fade" id="utilitarios" role="tabpanel" aria-labelledby="utilitarios-tab">
+
+						<div class="accordion" id="accordionUtilitarios"></div>
+
+					</div> <!-- ./Utilitários -->
+
+					<!-- Prédios -->
+					<div class="tab-pane fade" id="predios" role="tabpanel" aria-labelledby="predios-tab">
+
+					</div> <!-- ./Prédios -->
+
+					<!-- Organograma -->
+					<div class="tab-pane fade" id="organograma" role="tabpanel" aria-labelledby="organograma-tab">
+
+						<div class="row">
+							<div class="col-sm-3">
+
+								<div id="tree2"></div>
+
+							</div>
+							<div class="col-sm-9">
+
+								<div id="tree" style="border: 1px black solid; width: 100%; height: 700px;"></div>
+
+							</div>
+						</div>
+
+						<br />
+
+						<div class="row">
+							<div class="col-sm-12">
+
+								<table id='tabela_organograma' class='table table-striped table-bordered' style='width:100%'></table>
+
+							</div>
+						</div>
+						
+						
+						
+						<br />
+						
+
+					</div> <!-- ./Organograma -->
+
+					<!-- Localidades -->
+					<div class="tab-pane fade" id="localidades" role="tabpanel" aria-labelledby="localidades-tab">
+
+					</div> <!-- ./Localidades -->
+
+					<!-- Impressoras -->
+					<div class="tab-pane fade" id="impressoras" role="tabpanel" aria-labelledby="impressoras-tab">
+
+					</div> <!-- ./Impressoras -->
+
+					<!-- Contato -->
+					<div class="tab-pane fade" id="contato" role="tabpanel" aria-labelledby="contato-tab">
+
+					</div> <!-- ./Contato -->
+
+					<!-- Busca -->
+					<div class="tab-pane fade" id="busca" role="tabpanel" aria-labelledby="busca-tab">
+
+						<strong id="quantidade"></strong>
+						<div class="accordion" id="saidaTxt">Nenhum resultado...</div>
+
+					</div> <!-- ./Busca -->
+
+				</div> <!-- ./Conteudo -->
+
+			</div>
+
+			<!-- sidebar, which will move to the top on a small screen -->
+			<div class="col-sm-2" id="sidebar-dinamic-content">
+				<nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+			</div>
+
+		</div>
+
+	</main> <!-- ./main -->
+
+	<!-- footer -->
+	<footer class="container-fluid footer">
+		<p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a
+				href="https://twitter.com/mdo">@mdo</a>.</p>
+
+		<p>Página desenvolvida por: <strong>Paulo Henrique Gonçalves Rezende</strong></p>
+	</footer> <!-- ./footer -->
+
+</body>
+
+</html>

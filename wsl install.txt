@@ -1,0 +1,10 @@
+https://docs.microsoft.com/en-us/windows/wsl/install-win10#simplified-installation-for-windows-insiders
+
+https://nextjs.org/docs/getting-started
+https://nextjs.org/learn/basics/create-nextjs-app
+
+Install NodeJS on Windows Subsystem for Linux (WSL2)
+https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl
+
+nodejs: tar EPERM: operation not permitted, futime
+https://stackoverflow.com/questions/56457844/tar-eperm-operation-not-permitted-futime

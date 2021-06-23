@@ -1,0 +1,5 @@
+https://tableless.com.br/introducao-ao-amd-com-requirejs/
+
+https://www.google.com/search?client=firefox-b-d&q=construindo+uma+pagina+com+require+js
+
+https://requirejs.org/docs/api.html
