@@ -8412,6 +8412,20 @@ const json = {
       "Altura": "1280",
       "Largura": "720",
       "Tipo": "video/mp4"
+    },
+    {
+      "ID": 4,
+      "Source": "video/reuniao-evento-auditorio.mp4",
+      "Altura": "352",
+      "Largura": "640",
+      "Tipo": "video/mp4"
+    },
+    {
+      "ID": 5,
+      "Source": "video/reuniao-evento-auditorio-controles-ar.mp4",
+      "Altura": "352",
+      "Largura": "640",
+      "Tipo": "video/mp4"
     }
   ],
   formatacao: [
@@ -8905,6 +8919,14 @@ const json = {
     {
       "Titulo": "CheckList de pós viagem",
       "Conteudo": "Em construção"
+    },
+    {
+      "Titulo": "Reunião no auditório",
+      "Conteudo": `<h3>Reuniões no Auditório da PGJ</h3>
+      <p>Em alguns determinados momentos, devemos auxiliar o pessoal do Cerimonial para ajudar nas configurações de mesa e acompanhar a live. Para isso, gravamos esses dois vídeos abaixo:</p>
+      <p id='video4'></p>
+      <p id='video5'></p>
+      `
     }
   ],
   mapa_pgj_principal_inferior: [
