@@ -72,3 +72,4 @@ data/backup/*
 data/*.jpg
 data/*.xlsx
 data/*.pdf
+download/*
