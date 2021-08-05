@@ -8424,8 +8424,50 @@ const json = {
       "Source": "img/formatacao_remota_10.png",
       "Tamanho": "700px",
       "TituloAlt": "Painel de Controle > Sistemas e Segurança > Configuration Manager"
+    },
+    {
+      "ID": 58,
+      "Source": "img/formatacao_remota_11.png",
+      "Tamanho": "270px",
+      "TituloAlt": "Configuration Manager, aba Ações"
+    },
+    {
+      "ID": 59,
+      "Source": "img/formatacao_remota_12.png",
+      "Tamanho": "500px",
+      "TituloAlt": "Configuration Manager, caixa de mensagem com sucesso"
+    },
+    {
+      "ID": 60,
+      "Source": "img/formatacao_remota_13.png",
+      "Tamanho": "340px",
+      "TituloAlt": "Gerenciador de tarefas com um único usuário"
+    },
+    {
+      "ID": 61,
+      "Source": "img/formatacao_remota_14.png",
+      "Tamanho": "300px",
+      "TituloAlt": "Balão no tray do sistema informando sobre os novos softwares"
+    },
+    {
+      "ID": 62,
+      "Source": "img/formatacao_remota_15.png",
+      "Tamanho": "600px",
+      "TituloAlt": "Central de Software com os Sistemas operacionais"
+    },
+    {
+      "ID": 63,
+      "Source": "img/formatacao_remota_16.png",
+      "Tamanho": "620px",
+      "TituloAlt": "Caixa de mensagem pedindo para instalar"
+    },
+    {
+      "ID": 64,
+      "Source": "img/formatacao_remota_18.png",
+      "Tamanho": "250px",
+      "TituloAlt": "Instalação em andamento"
     }
-
+    
 
     
   ],
@@ -8550,15 +8592,35 @@ const json = {
       <p id='imagem52'></p>
       <p>Agora basta entrar no <kbd>Menu Iniciar</kbd> e digitar 'Central de Software'.</p>
       <p id='imagem53'></p>
-      <p>Conforme a imagem abaixo, caso a máquina tenha sido colocada na coleção de 'Imagem Remota' muito cedo, ela provavelmente não terá nada na aba de Sistemas Operacionais, pois o Servidor precisa replicar essa política para a máquina e isso demora alguns minutos. Felizmente, podemos acelerar esse processo.</p>
+      <p>Conforme a imagem abaixo, caso a máquina tenha sido colocada na coleção de <strong>'Imagem Remota'</strong> muito cedo, ela provavelmente não terá nada na aba de Sistemas Operacionais, pois o Servidor precisa replicar essa política para a máquina e isso demora alguns minutos. Felizmente, podemos acelerar esse processo.</p>
       <p id='imagem54'></p>
       <h3>Acelerando o processo de SOs</h3>
       <p>Caso isso aconteça, entremos novamente no <kbd>Menu Iniciar</kbd> e digitemos 'Painel de Controle'.</p>
       <p id='imagem55'></p>
-      <p>Inverta o Painel de Controle no formatação de exibição por Categoria, conforme a imagem abaixo, caso o seu não esteja.</p>
+      <p>Inverta o Painel de Controle no formatação de exibição por <strong>Categoria</strong>, conforme a imagem abaixo, caso o seu não esteja.</p>
       <p id='imagem56'></p>
       <p>Clicando em Sistema e Segurança, o último item é o <samp>'Configuration Manager'</samp>, clique nele e se abrirá uma nova janela.</p>
       <p id='imagem57'></p>
+      <p>Nessa janela, clique na aba <strong>Ações</strong> aparecerá uma série de opções com o botão <kbd>Executar agora</kbd> desabilitado. Precisaremos selecionar duas opções e clicar nele, são elas:</p>
+      <ul>
+        <li>Ciclo de Recuperação e Avaliação de Diretiva de Computador</li>
+        <li>Ciclo de Recuperação e Avaliação de Diretiva de Usuário</li>
+      </ul>
+      <p id='imagem58'></p>
+      <p>Ao clicar em cada um, uma caixa de mensagem se abrirá informando que levará vários minutos para ser concluído, mas geralmente é executado em alguns minutos, basta aguardar.</p>
+      <p id='imagem59'></p>
+      <p>Caso não seja executado, pode executá-lo novamente ou então, possa ser que exista algum outro usuário conectado na estação. Segundo o Mumu, as políticas só são aplicadas quando apenas o usuário da máquina é o único conectado, caso haja alguma sessão de outro usuário parada, ele não aplicará as políticas da coleção de <strong>'Imagem Remota'</strong>. Resolvemos isso reiniciando o computador do usuário ou entrando no <strong>Gerenciador de Tarefas em modo administrador</strong> e encerrando a outra sessão.</p>
+      <p>Uma forma simples de entrar no gerenciador de tarefas em modo Administrador é: Entre no prompt de comando do Windows (<strong>CMD</strong>) e digite <samp>taskmgr.exe</samp>. Depois é só clicar na aba <strong>Usuários</strong> e clicar no usuário remanescente, apertar o botão <kbd>Logoff</kbd> e aguardar ele ser desconectado, ficando apenas o usuário que estamos acessando remotamente. Feito isso, basta repetir os processos anteriores do Painel de controle e Configuration Manager.</p>
+      <p id='imagem60'></p>
+      <p>Agora basta aguardar aparecer um balão informando que novos softwares estão disponíveis, sendo assim, basta trocar as abas da Central de Software e voltar novamente para Sistemas Operacionais ou fechar e abrir novamente.</p>
+      <p id='imagem61'></p>
+      <p>Agora teremos os sistemas operacionais disponíveis, aqui é igual na formatação na bancada, basta escolher a localidade que a estação está e selecioná-lo.</p>
+      <p id='imagem62'></p>
+      <p>Agora basta clicar em Instalar e aguardar o processo de instalação.</p>
+      <p id='imagem63'></p>
+      <p id='imagem64'></p>
+      <p>Depois disso, a máquina irá reiniciar e realizar o mesmo procedimento que é feito pelo PXE do boot no <kbd>F12</kbd>. Geralmente é um procedimento que demora cerca de 2 horas e depois disso estará pronto.</p>
+      <p>Pode ser que falte alguns recursos, como placas de vídeo offboards que não são instaladas pela imagem que o usuário vai avisar por estar faltnado um dos monitores. Basta entrar novamente via acesso remoto e fazer os ajustes necessários.</p>
       `
     },
     {
