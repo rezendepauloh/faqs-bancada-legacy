@@ -8382,7 +8382,52 @@ const json = {
       "Source": "img/velti-instalacao-11.png",
       "Tamanho": "800px",
       "TituloAlt": "Plugin do Flash instalado no Windows."
+    },
+    {
+      "ID": 51,
+      "Source": "img/formatacao_remota_04.png",
+      "Tamanho": "744px",
+      "TituloAlt": "Realizando o acesso remoto na estação do usuário."
+    },
+    {
+      "ID": 52,
+      "Source": "img/formatacao_remota_05.png",
+      "Tamanho": "800px",
+      "TituloAlt": "Acessando a estação de forma remota pelo SCCM"
+    },
+    {
+      "ID": 53,
+      "Source": "img/formatacao_remota_06.png",
+      "Tamanho": "360px",
+      "TituloAlt": "Menu Iniciar > Central de Software"
+    },
+    {
+      "ID": 54,
+      "Source": "img/formatacao_remota_07.png",
+      "Tamanho": "700px",
+      "TituloAlt": "Central de Software sem SOs"
+    },
+    {
+      "ID": 55,
+      "Source": "img/formatacao_remota_08.png",
+      "Tamanho": "360px",
+      "TituloAlt": "Menu Iniciar > Painel de Controle"
+    },
+    {
+      "ID": 56,
+      "Source": "img/formatacao_remota_09.png",
+      "Tamanho": "703px",
+      "TituloAlt": "Painel de Controle em Categorias"
+    },
+    {
+      "ID": 57,
+      "Source": "img/formatacao_remota_10.png",
+      "Tamanho": "700px",
+      "TituloAlt": "Painel de Controle > Sistemas e Segurança > Configuration Manager"
     }
+
+
+    
   ],
   videos: [
     {
@@ -8497,7 +8542,24 @@ const json = {
       <p>Utilizaremos o <samp>SCCM</samp> para colocar as estações nos itens de coleção. Coleções são um grupo de máquinas que estão condicionadas a um determinado evento na rede.</p>
       <p id='imagem12'></p>
       <p>Na janela que se abrir, nas coleções a direita, você poderá selecionar a coleção '<strong>Imagem Remota</strong>' e pressionar <kbd>OK</kbd>.</p>
-      <p id='imagem13'></p>`
+      <p id='imagem13'></p>
+      <p>Depois disso, agora é se comunicar com o usuário, seja via <strong>Teams</strong>, <strong>WhatsApp funcional</strong> ou via <strong>telefone</strong>, e realizar o acesso remoto em sua estação via <samp>SCCM</samp>.</p>
+      <p id='imagem51'></p>
+      <h3>Dentro da estação do usuário</h3>
+      <p>O usuário aceitando a conexão do lado dele, agora teremos o acesso e poderemos dar os próximos passos.</p>
+      <p id='imagem52'></p>
+      <p>Agora basta entrar no <kbd>Menu Iniciar</kbd> e digitar 'Central de Software'.</p>
+      <p id='imagem53'></p>
+      <p>Conforme a imagem abaixo, caso a máquina tenha sido colocada na coleção de 'Imagem Remota' muito cedo, ela provavelmente não terá nada na aba de Sistemas Operacionais, pois o Servidor precisa replicar essa política para a máquina e isso demora alguns minutos. Felizmente, podemos acelerar esse processo.</p>
+      <p id='imagem54'></p>
+      <h3>Acelerando o processo de SOs</h3>
+      <p>Caso isso aconteça, entremos novamente no <kbd>Menu Iniciar</kbd> e digitemos 'Painel de Controle'.</p>
+      <p id='imagem55'></p>
+      <p>Inverta o Painel de Controle no formatação de exibição por Categoria, conforme a imagem abaixo, caso o seu não esteja.</p>
+      <p id='imagem56'></p>
+      <p>Clicando em Sistema e Segurança, o último item é o <samp>'Configuration Manager'</samp>, clique nele e se abrirá uma nova janela.</p>
+      <p id='imagem57'></p>
+      `
     },
     {
       "Titulo": "Máquinas do Parque",
